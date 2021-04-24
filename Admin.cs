@@ -9,6 +9,9 @@ namespace Asg3_Task1
     public class Admin : User, Subject
     {
         List<Observer> obs;
+
+        public List<Observer> Obs { get => obs; set => obs = value; }
+
         public Admin(int id, string name, string phone, string email, string pass, DateTime dob) : base(id, name, phone, email, pass, dob)
         {
             obs = new List<Observer>();
@@ -21,12 +24,15 @@ namespace Asg3_Task1
         {
             obs.Remove(o);
         }
-        public void NotifyObserver(Ad ad)
+        public List<string> NotifyObserver(Ad ad)
         {
+            List<string> temp = new List<string>();
             foreach(Observer i in obs)
             {
-                i.Update(ad);
+                if(i.GetInterests().Contains(ad.Category))
+                    temp.Add(i.Update(ad));
             }
+            return temp;
         }
         public Ad Create_ad(string title, string category, string desc)
         {

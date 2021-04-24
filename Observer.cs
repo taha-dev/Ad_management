@@ -8,6 +8,7 @@ namespace Asg3_Task1
 {
     public interface Observer
     {
-        void Update(Ad ad);
+        string Update(Ad ad);
+        List<string> GetInterests();
     }
 }

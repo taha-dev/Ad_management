@@ -19,11 +19,15 @@ namespace Asg3_Task1
 
         public string Display(Ad ad)
         {
-            return ad.Print()+"\n"+this.Print();
+            return ad.Print()+"\n"+this.Print()+"\n";
         }
-        public void Update(Ad ad)
+        public List<string> GetInterests()
         {
-            Display(ad);
+            return Interests;
+        }
+        public string Update(Ad ad)
+        {
+            return Display(ad);
         }
         public override string Print()
         {

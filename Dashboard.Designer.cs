@@ -118,6 +118,7 @@ namespace Asg3_Task1
             this.btn_create_cat.TabIndex = 5;
             this.btn_create_cat.Text = "Create";
             this.btn_create_cat.UseVisualStyleBackColor = true;
+            this.btn_create_cat.Click += new System.EventHandler(this.btn_create_cat_Click);
             // 
             // label5
             // 
@@ -161,9 +162,9 @@ namespace Asg3_Task1
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(31, 251);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 19);
+            this.label9.Size = new System.Drawing.Size(184, 19);
             this.label9.TabIndex = 10;
-            this.label9.Text = "Description";
+            this.label9.Text = "Description (500 char max)";
             // 
             // txt_ad_title
             // 
@@ -178,7 +179,7 @@ namespace Asg3_Task1
             this.cmb_ad_cat.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_ad_cat.FormattingEnabled = true;
             this.cmb_ad_cat.Items.AddRange(new object[] {
-            "Cars",
+            "Car",
             "Home",
             "Laptop"});
             this.cmb_ad_cat.Location = new System.Drawing.Point(331, 195);
@@ -190,6 +191,7 @@ namespace Asg3_Task1
             // 
             this.rchtxt_desc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rchtxt_desc.Location = new System.Drawing.Point(35, 273);
+            this.rchtxt_desc.MaxLength = 500;
             this.rchtxt_desc.Name = "rchtxt_desc";
             this.rchtxt_desc.Size = new System.Drawing.Size(446, 125);
             this.rchtxt_desc.TabIndex = 13;
@@ -290,14 +292,14 @@ namespace Asg3_Task1
             this.dtp_dob.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_dob.Location = new System.Drawing.Point(331, 590);
             this.dtp_dob.Name = "dtp_dob";
-            this.dtp_dob.Size = new System.Drawing.Size(200, 27);
+            this.dtp_dob.Size = new System.Drawing.Size(263, 27);
             this.dtp_dob.TabIndex = 24;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(553, 596);
+            this.label16.Location = new System.Drawing.Point(615, 596);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(66, 19);
             this.label16.TabIndex = 25;
@@ -311,7 +313,7 @@ namespace Asg3_Task1
             "Car",
             "Home",
             "Laptop"});
-            this.clb_interests.Location = new System.Drawing.Point(625, 593);
+            this.clb_interests.Location = new System.Drawing.Point(687, 593);
             this.clb_interests.Name = "clb_interests";
             this.clb_interests.Size = new System.Drawing.Size(129, 26);
             this.clb_interests.TabIndex = 26;
@@ -325,6 +327,7 @@ namespace Asg3_Task1
             this.btn_adpost.TabIndex = 27;
             this.btn_adpost.Text = "Post";
             this.btn_adpost.UseVisualStyleBackColor = true;
+            this.btn_adpost.Click += new System.EventHandler(this.btn_adpost_Click);
             // 
             // btn_update_user
             // 
@@ -335,6 +338,7 @@ namespace Asg3_Task1
             this.btn_update_user.TabIndex = 28;
             this.btn_update_user.Text = "Update";
             this.btn_update_user.UseVisualStyleBackColor = true;
+            this.btn_update_user.Click += new System.EventHandler(this.btn_update_user_Click);
             // 
             // btn_create_user
             // 
@@ -345,12 +349,13 @@ namespace Asg3_Task1
             this.btn_create_user.TabIndex = 29;
             this.btn_create_user.Text = "Create";
             this.btn_create_user.UseVisualStyleBackColor = true;
+            this.btn_create_user.Click += new System.EventHandler(this.btn_create_user_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 705);
+            this.ClientSize = new System.Drawing.Size(935, 705);
             this.Controls.Add(this.btn_create_user);
             this.Controls.Add(this.btn_update_user);
             this.Controls.Add(this.btn_adpost);

@@ -10,6 +10,6 @@ namespace Asg3_Task1
     {
         void RegisterObserver(Observer obs);
         void RemoveObserver(Observer obs);
-        void NotifyObserver(Ad obs);
+        List<string> NotifyObserver(Ad obs);
     }
 }
