@@ -9,6 +9,9 @@ namespace Asg3_Task1
     public class Consumer : User, Observer
     {
         List<string> _interests;
+
+        public List<string> Interests { get => _interests; set => _interests = value; }
+
         public Consumer(int id, string name, string phone, string email, string pass, DateTime dob, List<string> interests) : base(id, name, phone, email, pass, dob)
         {
             _interests = interests;
@@ -22,6 +25,14 @@ namespace Asg3_Task1
         {
             Display(ad);
         }
-
+        public override string Print()
+        {
+            string interest = "";
+            foreach(string i in Interests)
+            {
+                interest += i + ", ";
+            }
+            return base.Print()+interest;
+        }
     }
 }

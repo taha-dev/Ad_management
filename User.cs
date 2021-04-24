@@ -31,7 +31,7 @@ namespace Asg3_Task1
         public DateTime Dob { get => _dob; set => _dob = value; }
         public string Email { get => _email; set => _email = value; }
         public string Pass { get => _pass; set => _pass = value; }
-        public string Print()
+        public virtual string Print()
         {
             return string.Format("Id => {0}, Name => {1}, Email => {2}, Phone => {3}, Dob => {4}", Id, Name, Email, Phone, Dob);
         }

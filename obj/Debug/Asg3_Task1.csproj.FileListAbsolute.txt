@@ -1,0 +1,11 @@
+C:\Users\W4R10CK\source\repos\Asg3_Task1\bin\Debug\Asg3_Task1.exe.config
+C:\Users\W4R10CK\source\repos\Asg3_Task1\bin\Debug\Asg3_Task1.exe
+C:\Users\W4R10CK\source\repos\Asg3_Task1\bin\Debug\Asg3_Task1.pdb
+C:\Users\W4R10CK\source\repos\Asg3_Task1\obj\Debug\Asg3_Task1.csprojAssemblyReference.cache
+C:\Users\W4R10CK\source\repos\Asg3_Task1\obj\Debug\Asg3_Task1.Home.resources
+C:\Users\W4R10CK\source\repos\Asg3_Task1\obj\Debug\Asg3_Task1.Properties.Resources.resources
+C:\Users\W4R10CK\source\repos\Asg3_Task1\obj\Debug\Asg3_Task1.csproj.GenerateResource.cache
+C:\Users\W4R10CK\source\repos\Asg3_Task1\obj\Debug\Asg3_Task1.csproj.CoreCompileInputs.cache
+C:\Users\W4R10CK\source\repos\Asg3_Task1\obj\Debug\Asg3_Task1.exe
+C:\Users\W4R10CK\source\repos\Asg3_Task1\obj\Debug\Asg3_Task1.pdb
+C:\Users\W4R10CK\source\repos\Asg3_Task1\obj\Debug\Asg3_Task1.Dashboard.resources

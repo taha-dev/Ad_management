@@ -34,13 +34,14 @@ namespace Asg3_Task1
             this.label3 = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
+            this.btn_login = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(123, 9);
+            this.label1.Location = new System.Drawing.Point(132, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 45);
             this.label1.TabIndex = 0;
@@ -81,12 +82,25 @@ namespace Asg3_Task1
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(200, 29);
             this.txt_pass.TabIndex = 4;
+            this.txt_pass.UseSystemPasswordChar = true;
+            // 
+            // btn_login
+            // 
+            this.btn_login.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.Location = new System.Drawing.Point(152, 241);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(84, 36);
+            this.btn_login.TabIndex = 5;
+            this.btn_login.Text = "LogIn";
+            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 313);
+            this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.label3);
@@ -106,6 +120,7 @@ namespace Asg3_Task1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.TextBox txt_pass;
+        private System.Windows.Forms.Button btn_login;
     }
 }
 

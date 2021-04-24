@@ -12,11 +12,9 @@ namespace Asg3_Task1
 {
     public partial class Home : Form
     {
-        public static List<Consumer> cn;
         public static Admin admin;
         public Home()
         {
-            cn = new List<Consumer>();
             Generate_admin();
             InitializeComponent();
         }
@@ -26,5 +24,24 @@ namespace Asg3_Task1
             admin = new Admin(1, "Muhammad Taha", "03174112922", "f2018065102@umt.edu.pk", "12345678", dob);
         }
 
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(txt_email.Text) || string.IsNullOrEmpty(txt_pass.Text))
+            {
+                MessageBox.Show("Please Fill Both Fields Correctly!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if(txt_email.Text == admin.Email && txt_pass.Text == admin.Pass)
+                {
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to login, Invalid Credentials!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

@@ -9,7 +9,10 @@ namespace Asg3_Task1
     public class Admin : User, Subject
     {
         List<Observer> obs;
-        public Admin(int id, string name, string phone, string email, string pass, DateTime dob) : base(id, name, phone, email, pass, dob){}
+        public Admin(int id, string name, string phone, string email, string pass, DateTime dob) : base(id, name, phone, email, pass, dob)
+        {
+            obs = new List<Observer>();
+        }
         public void RegisterObserver(Observer o)
         {
             obs.Add(o);
