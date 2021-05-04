@@ -35,11 +35,23 @@ namespace Asg3_Task1
                 if(txt_email.Text == admin.Email && txt_pass.Text == admin.Pass)
                 {
                     Dashboard dashboard = new Dashboard();
-                    dashboard.ShowDialog();
+                    this.Hide();
+                    dashboard.Show();
                 }
                 else
                 {
                     MessageBox.Show("Failed to login, Invalid Credentials!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(e.CloseReason == CloseReason.UserClosing)
+            {
+                if(MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
                 }
             }
         }

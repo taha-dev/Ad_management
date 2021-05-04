@@ -151,6 +151,18 @@ namespace Asg3_Task1
             }
             return temp;
         }
+        private void Clear_user_data()
+        {
+            txt_username.Text = "";
+            txt_phone.Text = "";
+            txt_email.Text = "";
+            txt_pass.Text = "";
+            dtp_dob.Value = DateTime.Today;
+            foreach (int i in clb_interests.CheckedIndices)
+            {
+                clb_interests.SetItemCheckState(i, CheckState.Unchecked);
+            }
+        }
         private void btn_create_user_Click(object sender, EventArgs e)
         {
             if(validate_user_fields() && validate_user_data())
@@ -186,6 +198,7 @@ namespace Asg3_Task1
                     f.ShowDialog();
                 }
                 MessageBox.Show("User Created Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clear_user_data();
             }
         }
 
@@ -233,6 +246,7 @@ namespace Asg3_Task1
                 }
                 f.ShowDialog();
                 MessageBox.Show("Consumer Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clear_user_data();
             }
         }
         private bool validate_ad()
@@ -261,12 +275,38 @@ namespace Asg3_Task1
                     {
                         rct.Text += i+"\n";
                     }
+                    txt_ad_title.Text = "";
+                    cmb_ad_cat.SelectedIndex = -1;
+                    rchtxt_desc.Text = "";
                     f.ShowDialog();
                 }
                 else
                 {
                     MessageBox.Show("empty list", "dasdasd");
                 }
+            }
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                if (MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.MessageLoop)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                Environment.Exit(1);
             }
         }
     }

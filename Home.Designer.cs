@@ -29,6 +29,7 @@ namespace Asg3_Task1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@ namespace Asg3_Task1
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(132, 9);
             this.label1.Name = "label1";
@@ -50,6 +52,7 @@ namespace Asg3_Task1
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(48, 106);
             this.label2.Name = "label2";
@@ -60,6 +63,7 @@ namespace Asg3_Task1
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(48, 184);
             this.label3.Name = "label3";
@@ -86,19 +90,23 @@ namespace Asg3_Task1
             // 
             // btn_login
             // 
+            this.btn_login.BackColor = System.Drawing.Color.Black;
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_login.Location = new System.Drawing.Point(152, 241);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(84, 36);
             this.btn_login.TabIndex = 5;
             this.btn_login.Text = "LogIn";
-            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.UseVisualStyleBackColor = false;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Asg3_Task1.Properties.Resources.login_bg;
             this.ClientSize = new System.Drawing.Size(396, 313);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_pass);
@@ -106,8 +114,10 @@ namespace Asg3_Task1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Home";
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
